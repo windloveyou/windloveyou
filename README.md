@@ -3,8 +3,8 @@
 ### 👋 Hi, I’m glad to meet you all!
 - 👀 I’m interested in Ai, including CV and NLP.
 - 🌱 I’m currently learning Computer Vision.
-- 💞️ CSDN blog:[风的暖色调_CSDN](https://blog.csdn.net/m0_73954489?type=lately)
-- 📫 bilibili video:[风的暖色调_Bilibili](https://blog.csdn.net/m0_73954489?type=lately)
+- 💞️ CSDN blog: [风的暖色调_CSDN](https://blog.csdn.net/m0_73954489?type=lately)
+- 📫 bilibili video: [风的暖色调_Bilibili](https://blog.csdn.net/m0_73954489?type=lately)
 - 💬 Email: windlovey@gmail.com
 - ⚡ Fun fact: Studying in Changshu Institute of Technology.
 - 📝 Publications
