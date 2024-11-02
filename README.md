@@ -8,7 +8,7 @@
 - 💬 Email: windlovey@gmail.com
 - ⚡ Fun fact: Studying in Changshu Institute of Technology.
 - 📝 Publications
-    - AICCC2024 | ESPCA: An Efficient Spatial-Sensitive Partial Channel Attention Mechanism in CNNs]
+    - AICCC2024 | ESPCA: An Efficient Spatial-Sensitive Partial Channel Attention Mechanism in CNNs
 - ⭐Dream: Aspiring to become an excellent artificial intelligence algorithm engineer.
 <!---
 windloveyou/windloveyou is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
