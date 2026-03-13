@@ -6,7 +6,7 @@
 - 💞️ CSDN blog: [风的暖色调_CSDN](https://blog.csdn.net/m0_73954489?type=lately)
 - 📫 Bilibili video: [风的暖色调_Bilibili](https://blog.csdn.net/m0_73954489?type=lately)
 - 💬 Email: windlovey@gmail.com
-- ⚡ Fun fact: Studying in Changshu Institute of Technology.
+- ⚡ Fun fact: Studying in Suzhou University of Technology.
 - 📝 Publications
     - AICCC2024 | ESPCA: An Efficient Spatial-Sensitive Partial Channel Attention Mechanism in CNNs
 - ⭐Dream: Aspiring to become an excellent artificial intelligence algorithm engineer.
