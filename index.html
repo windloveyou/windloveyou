@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>张三 | Zhang San</title>
+<!-- 👆 替换成你的名字 -->
+<meta name="description" content="张三的个人学术主页:研究方向、发表论文与联系方式。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FBFBF9;
+    --ink: #21272E;
+    --ink-soft: #5B6470;
+    --accent: #24548C;
+    --accent-tint: #EAF0F7;
+    --rule: #E4E4DE;
+    --serif: "Spectral", "Songti SC", "Noto Serif SC", serif;
+    --sans: "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s ease;
+  }
+  a:hover, a:focus-visible { border-bottom-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+  /* ===== 顶部 ===== */
+  header {
+    padding: 72px 0 40px;
+    animation: rise .5s ease both;
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .name {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 2.4rem;
+    letter-spacing: .01em;
+    line-height: 1.2;
+  }
+  .name .en {
+    font-size: 1.3rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin-left: .5em;
+  }
+
+  .tagline {
+    margin-top: 10px;
+    color: var(--ink-soft);
+    font-size: 1.02rem;
+  }
+
+  nav {
+    margin-top: 28px;
+    display: flex;
+    gap: 22px;
+    font-size: .92rem;
+    font-weight: 500;
+  }
+  nav a { color: var(--ink); }
+  nav a:hover { color: var(--accent); }
+
+  /* ===== 章节 ===== */
+  section { padding: 40px 0; border-top: 1px solid var(--rule); }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.35rem;
+    margin-bottom: 22px;
+  }
+
+  .about p + p { margin-top: 14px; }
+
+  .interests {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .interests span {
+    background: var(--accent-tint);
+    color: var(--accent);
+    font-size: .85rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+
+  /* ===== 论文:年份挂在左侧页边 ===== */
+  .pub-year-group { display: grid; grid-template-columns: 72px 1fr; gap: 0 20px; }
+  .pub-year-group + .pub-year-group { margin-top: 28px; }
+
+  .pub-year {
+    font-family: var(--serif);
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 1.05rem;
+    padding-top: 2px;
+  }
+
+  .pub-list { display: grid; gap: 20px; }
+
+  .pub .title {
+    font-weight: 600;
+    font-size: 1.02rem;
+    line-height: 1.5;
+  }
+  .pub .authors {
+    color: var(--ink-soft);
+    font-size: .92rem;
+    margin-top: 2px;
+  }
+  .pub .authors b { color: var(--ink); font-weight: 600; }
+  .pub .meta {
+    margin-top: 4px;
+    font-size: .88rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: baseline;
+  }
+  .pub .venue {
+    font-style: italic;
+    color: var(--ink-soft);
+    font-family: var(--serif);
+  }
+
+  /* ===== 联系方式 ===== */
+  .contact-list {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+  .contact-list li {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    font-size: .96rem;
+  }
+  .contact-list .label {
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 28px 0 48px;
+    color: var(--ink-soft);
+    font-size: .85rem;
+  }
+
+  @media (max-width: 560px) {
+    header { padding-top: 48px; }
+    .name { font-size: 1.9rem; }
+    .name .en { display: block; margin: 6px 0 0; }
+    .pub-year-group { grid-template-columns: 1fr; gap: 8px; }
+    .contact-list li { grid-template-columns: 90px 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <h1 class="name">张三<span class="en">Zhang San</span></h1>
+    <!-- 👆 替换成你的中英文名字 -->
+    <p class="tagline">XX大学 · 计算机科学 博士生 / 研究员</p>
+    <!-- 👆 替换成你的单位和身份 -->
+    <nav>
+      <a href="#about">关于我</a>
+      <a href="#publications">发表论文</a>
+      <a href="#contact">联系方式</a>
+    </nav>
+  </header>
+
+  <section id="about" class="about">
+    <h2>关于我</h2>
+    <p>
+      我目前在 XX大学 攻读博士学位,导师为 XXX 教授。我的研究方向是机器学习与自然语言处理,
+      特别关注大语言模型的可解释性与安全性。
+    </p>
+    <p>
+      在此之前,我于 20XX 年在 XX大学 获得学士学位。
+    </p>
+    <!-- 👆 用两三句话介绍自己,不需要的段落可以删掉 -->
+    <div class="interests">
+      <span>机器学习</span>
+      <span>自然语言处理</span>
+      <span>大语言模型</span>
+      <!-- 👆 替换成你的研究关键词 -->
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>发表论文</h2>
+
+    <!-- 每一年是一个 pub-year-group,年份显示在左侧页边;按时间倒序排列 -->
+    <div class="pub-year-group">
+      <div class="pub-year">2025</div>
+      <div class="pub-list">
+
+        <article class="pub">
+          <div class="title">A Simple Method for Something Important</div>
+          <div class="authors"><b>Zhang San</b>, Li Si, Wang Wu</div>
+          <div class="meta">
+            <span class="venue">NeurIPS 2025</span>
+            <a href="https://arxiv.org/abs/xxxx.xxxxx">Paper</a>
+            <a href="https://github.com/yourname/repo">Code</a>
+          </div>
+        </article>
+
+        <article class="pub">
+          <div class="title">Another Interesting Research Work</div>
+          <div class="authors">Li Si, <b>Zhang San</b></div>
+          <div class="meta">
+            <span class="venue">ACL 2025</span>
+            <a href="https://arxiv.org/abs/xxxx.xxxxx">Paper</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="pub-year-group">
+      <div class="pub-year">2024</div>
+      <div class="pub-list">
+
+        <article class="pub">
+          <div class="title">An Earlier Study on Some Topic</div>
+          <div class="authors"><b>Zhang San</b></div>
+          <div class="meta">
+            <span class="venue">arXiv preprint</span>
+            <a href="https://arxiv.org/abs/xxxx.xxxxx">Paper</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <p style="margin-top:24px; font-size:.92rem; color:var(--ink-soft);">
+      完整论文列表请见我的 <a href="https://scholar.google.com/citations?user=你的ID">Google Scholar</a>。
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>联系方式</h2>
+    <ul class="contact-list">
+      <li><span class="label">Email</span><a href="mailto:yourname@example.com">yourname@example.com</a></li>
+      <li><span class="label">GitHub</span><a href="https://github.com/yourname">github.com/yourname</a></li>
+      <li><span class="label">Scholar</span><a href="https://scholar.google.com/citations?user=你的ID">Google Scholar</a></li>
+      <li><span class="label">Twitter / X</span><a href="https://twitter.com/yourname">@yourname</a></li>
+      <!-- 👆 替换成你的真实链接,不需要的整行删掉 -->
+    </ul>
+  </section>
+
+  <footer>
+    © 2026 张三 · 本站托管于 GitHub Pages
+  </footer>
+
+</div>
+
+</body>
+</html>
