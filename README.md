@@ -1,5 +1,3 @@
-![My github stats](https://github-readme-stats.vercel.app/api?username=windloveyou&show_icons=true)
-
 ### 👋 Hi, I’m glad to meet you all!
 - 👀 I’m interested in Ai, including CV and NLP.
 - 🌱 I’m currently learning Computer Vision.
